@@ -2572,6 +2572,14 @@ blockquote {
   margin-bottom: 20px;
 }
 
+.w-webflow-badge {
+  display: none !important;
+}
+
+h1 {
+  font-family: inherit !important;
+}
+
 .h2.white {
   color: #fff;
 }
