@@ -2943,7 +2943,7 @@ h1 {
 }
 
 .wrapper-brands img {
-  width: 60px;
+  width: 80px;
 }
 
 .form {
@@ -3284,8 +3284,12 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
 }
-
+.wrapper-brands div {
+  margin-bottom: 10px;
+}
 .hero-images {
   position: relative;
   display: -ms-grid;
@@ -5423,11 +5427,19 @@ h1 {
   }
 }
 
+.wrapper-brands div {
+  margin-bottom: 10px;
+  display: contents;
+}
+
 @media (max-width: 500px) {
   .wrapper-brands span {
-    margin-right: 0px; /* You can adjust the value to control the amount of space */
+    margin-right: 20px; /* You can adjust the value to control the amount of space */
   }
   .wrapper-brands img {
     width: 40px; /* You can adjust the value to control the maximum image width */
+  }
+  .wrapper-brands div {
+    display: block;
   }
 }
