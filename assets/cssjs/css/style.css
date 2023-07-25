@@ -2942,6 +2942,10 @@ h1 {
   margin: 40px auto 0px;
 }
 
+.wrapper-brands img {
+  width: 100px;
+}
+
 .form {
   display: -ms-grid;
   display: grid;
