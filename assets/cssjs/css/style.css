@@ -5425,7 +5425,7 @@ h1 {
 
 @media (max-width: 500px) {
   .wrapper-brands span {
-    margin-right: 5px; /* You can adjust the value to control the amount of space */
+    margin-right: 0px; /* You can adjust the value to control the amount of space */
   }
   .wrapper-brands img {
     width: 40px; /* You can adjust the value to control the maximum image width */
