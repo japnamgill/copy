@@ -5443,3 +5443,12 @@ h1 {
     display: block;
   }
 }
+
+.brand-project img {
+  height: 110px;
+}
+
+.image.maxheight {
+  height: 245px;
+  object-fit: contain;
+}
