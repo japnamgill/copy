@@ -5437,7 +5437,7 @@ h1 {
     margin-right: 20px; /* You can adjust the value to control the amount of space */
   }
   .wrapper-brands img {
-    width: 40px; /* You can adjust the value to control the maximum image width */
+    width: 60px; /* You can adjust the value to control the maximum image width */
   }
   .wrapper-brands div {
     display: block;
