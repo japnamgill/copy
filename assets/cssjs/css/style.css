@@ -5452,3 +5452,55 @@ h1 {
   height: 245px;
   object-fit: contain;
 }
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+} */
+/* 
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.video-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* .small-container {
+  flex: 1;
+} */
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+.h2 {
+  font-size: 24px;
+}
+
+.red {
+  color: red;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 767px) {
+  .horizontal-container {
+    flex-direction: column;
+  }
+
+  .video-container,
+  .small-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .video-container video {
+    height: auto;
+  }
+}
