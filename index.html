@@ -6771,15 +6771,15 @@ data-wf-site="cssjs">
                   </div>
                   <div class="steps-container">
                     <div class="step active" onclick="changeStep(1)">
-                      <p class="size1">Step 1: Subscribe to a Plan</p>
+                      <p class="size1 bolded">Step 1: Subscribe to a Plan</p>
                       <p class="step-content">Find the plan that works for you and pause anytime.</p>
                     </div>
                     <div class="step" onclick="changeStep(2)">
-                      <p class="size1">Step 2: Request New Copy</p>
+                      <p class="size1 bolded">Step 2: Request New Copy</p>
                       <p class="step-content">Add unlimited requests to the backlog. They’ll be completed in priority order, one at a time.</p>
                     </div>
                     <div class="step" onclick="changeStep(3)">
-                      <p class="size1">Step 3: Receive Your Content</p>
+                      <p class="size1 bolded">Step 3: Receive Your Content</p>
                       <p class="step-content">Most tasks are turned around within 48 hours. Enjoy unlimited revisions til you’re 100% happy with the results.</p>
                     </div>
                   </div>
@@ -7332,13 +7332,16 @@ autoChangeStep(); // Start the automatic slideshow
         margin-bottom:10px;
     }
 
-   
+   .bolded{
+    font-weight: bolder;
+   }
 
     .step-content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.5s ease, opacity 0.5s ease;
+  font-size: 16px;
 }
 
 /* Show only the active step content */
@@ -7360,7 +7363,7 @@ autoChangeStep(); // Start the automatic slideshow
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 50px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .image-container {
