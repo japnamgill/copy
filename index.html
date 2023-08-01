@@ -6929,7 +6929,7 @@ services for you</h3>
                         <p class="size1">WHAT YOU GET
 
                         </p>
-                        <h3 class="size  subtitle">Never worry about meetings
+                        <h3 class="size ">Never worry about meetings
                         </h3>
                         <p class="size1">We can handle all communications async, meaning you save time and your sanity. No more Zoom calls for you.</p>
                     </div>
@@ -6937,12 +6937,12 @@ services for you</h3>
                         <p class="size1">WHAT YOU GET
 
                         </p>
-                        <h3 class=" size subtitle">A simple source of truth for all requests</h3>
+                        <h3 class=" size ">A simple source of truth for all requests</h3>
                         <p class="size1">Manage and prioritize the content you need in a simple board. Create new requests, view active tasks, and go back to past projects in seconds.</p>
                     </div>
                     <div class="service-container top-line">
                         <p class="size1">WHAT YOU GET</p>
-                        <h3 class=" size subtitle">Let anyone from your team join in
+                        <h3 class=" size ">Let anyone from your team join in
 
 
                         </h3>
@@ -7348,6 +7348,10 @@ autoChangeStep(); // Start the automatic slideshow
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
+.buttons-container{
+    margin-top:15px;
+}
+
 .container1 {
   display: flex;
   align-items: center;
@@ -7408,14 +7412,17 @@ autoChangeStep(); // Start the automatic slideshow
     max-width: 100%;
   }
   .image-container{
-    margin: 19px;
+    margin: 0;
+    padding: 8px;
   }
+ 
+  
 }
 
 /* For screens 800px and below */
 @media screen and (max-width: 800px) {
   .step-content {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 
@@ -7662,6 +7669,12 @@ autoChangeStep(); // Start the automatic slideshow
       .pricing-card {
         width: 100%;
         margin-bottom: 20px;
+      }
+      h1{
+        padding-bottom: 15px;
+      }
+      .subtitle{
+        padding-bottom: 15px;
       }
     }
 
