@@ -10263,3 +10263,64 @@ Webflow.require('ix2').init({
         }]
     }
 });
+
+
+    const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.question');
+  const answer = item.querySelector('.answer');
+  const toggleBtn = item.querySelector('.toggle-btn');
+
+  question.addEventListener('click', () => {
+    item.classList.toggle('active');
+    answer.classList.toggle('active');
+    if (item.classList.contains('active')) {
+      toggleBtn.textContent = '-';
+    } else {
+      toggleBtn.textContent = '+';
+    }
+  });
+});
+
+const stepImage = document.getElementById('stepImage');
+const stepImages = [
+  'assets/cssjs/stripe.PNG',
+  'assets/cssjs/stripe3.PNG',
+  'assets/cssjs/stripe2.PNG'
+];
+let currentStep = 1;
+let autoChangeInterval;
+
+function changeStep(step) {
+  if (step === currentStep) return;
+
+  clearInterval(autoChangeInterval); // Clear the auto-change interval
+
+  currentStep = step;
+  stepImage.src = stepImages[step - 1];
+
+  // Update active class for steps
+  const steps = document.querySelectorAll('.step');
+  steps.forEach((stepElement, index) => {
+    if (index + 1 === step) {
+      stepElement.classList.add('active');
+    } else {
+      stepElement.classList.remove('active');
+    }
+  });
+
+  autoChangeInterval = setInterval(() => {
+    currentStep = currentStep === 3 ? 1 : currentStep + 1;
+    changeStep(currentStep);
+  }, 3000); // Set a new auto-change interval
+}
+
+function autoChangeStep() {
+  autoChangeInterval = setInterval(() => {
+    currentStep = currentStep === 3 ? 1 : currentStep + 1;
+    changeStep(currentStep);
+  }, 3000); // Change step every 3 seconds
+}
+
+autoChangeStep(); // Start the automatic slideshow

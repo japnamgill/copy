@@ -5506,3 +5506,359 @@ h1 {
 }
 
 /* PAGE */
+.size {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.size1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bolded {
+  font-weight: bolder;
+}
+
+.step-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  font-size: 16px;
+}
+
+/* Show only the active step content */
+.step.active .step-content {
+  max-height: 1000px; /* Set a sufficiently large value */
+  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.buttons-container {
+  margin-top: 15px;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.image-container {
+  flex: 1;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.steps-container {
+  flex: 1;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%; /* Set width to match the active step */
+  height: 380px;
+}
+
+.step {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: white;
+}
+
+.step.active {
+  background-color: #f23131;
+  color: black;
+}
+
+/* For screens 600px and below */
+@media screen and (max-width: 600px) {
+  .container1 {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .steps-container {
+    max-width: 100%;
+  }
+  .image-container {
+    margin: 0;
+    padding: 8px;
+  }
+}
+
+/* For screens 800px and below */
+@media screen and (max-width: 800px) {
+  .step-content {
+    font-size: 16px;
+  }
+}
+
+.primary-button {
+  background-color: #f23131;
+}
+
+.faq-container {
+  width: 95%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.faq-accordion {
+  margin-top: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.toggle-btn {
+  font-size: 18px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 0;
+  font-size: 14px;
+  color: #444;
+  transition: max-height 0.3s ease, padding-top 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-item.active .answer {
+  max-height: 1000px; /* A large value to ensure all content is shown */
+  padding-top: 10px;
+  opacity: 1;
+}
+
+.faq-item.active .toggle-btn {
+  transform: rotate(-180deg);
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content-item i {
+  margin-bottom: 15px;
+}
+
+.content-item {
+  width: calc(33.33% - 20px); /* Three items in a row with 10px gap */
+  margin: 10px; /* Space between each content item */
+  text-align: center; /* Center align the text */
+  padding: 20px; /* Add padding to separate content from edges */
+  border-radius: 8px; /* Rounded corners for a nicer look */
+  color: black;
+  font-size: 15px;
+  background-color: white;
+}
+
+.content-item img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .content-item {
+    width: calc(50% - 20px);
+  }
+  .makeItGone {
+    display: none;
+  }
+}
+
+.pricing-cards {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.pricing-card {
+  background-color: #fff; /* White background */
+
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  width: 500px; /* Adjust the width as needed */
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card.most-popular {
+  border: 2px solid #f23131;
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-card p {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.checkmark {
+  margin-right: 5px;
+}
+
+.pricing-card .price {
+  font-size: 36px; /* Adjust the font size for the pricing */
+  font-weight: bold; /* Make the pricing bolder */
+  margin: 10px 0;
+}
+
+.pricing-card .total-price {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.pricing-card .savings {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.pricing-card .select-btn {
+  display: block;
+  width: 100%;
+  background-color: #f23131;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.select-btn:hover {
+  background-color: #d77075;
+}
+
+/* REQUESTSTTT  */
+.request-cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.request-card {
+  background-color: #fff; /* White background */
+
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(25% - 12px); /* Four cards in a row with 10px gap */
+  min-width: 100px; /* Minimum width to avoid tiny cards */
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+/* Full width big rectangle variant */
+.big-rectangle {
+  width: calc(100% - 15px);
+}
+
+.request-card h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.request-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+  .pricing-cards {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .pricing-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  h1 {
+    padding-bottom: 15px;
+  }
+  .subtitle {
+    padding-bottom: 15px;
+  }
+  #discover {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .request-card {
+    width: 100%; /* One card in a row for small screens */
+  }
+}
