@@ -2612,6 +2612,10 @@ h1 {
   margin-bottom: 0px;
 }
 
+.yes-margin {
+  margin-bottom: 15px !important;
+}
+
 .h4 {
   margin-top: 10px;
   font-family: "Libre Baskerville", sans-serif;
