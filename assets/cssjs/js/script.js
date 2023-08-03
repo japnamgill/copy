@@ -10303,24 +10303,27 @@ function changeStep(step) {
   // Update active class for steps
   const steps = document.querySelectorAll('.step');
   steps.forEach((stepElement, index) => {
+    const content = stepElement.querySelector('.step-content');
     if (index + 1 === step) {
       stepElement.classList.add('active');
+      content.style.display = 'block'; // Show the content when step is active
     } else {
       stepElement.classList.remove('active');
+      content.style.display = 'none'; // Hide the content when step is not active
     }
   });
 
-  autoChangeInterval = setInterval(() => {
+  // Restart the automatic slideshow after 3 seconds of inactivity
+  clearTimeout(autoChangeInterval);
+  autoChangeInterval = setTimeout(() => {
     currentStep = currentStep === 3 ? 1 : currentStep + 1;
     changeStep(currentStep);
-  }, 3000); // Set a new auto-change interval
+  }, 3000);
 }
 
-function autoChangeStep() {
-  autoChangeInterval = setInterval(() => {
-    currentStep = currentStep === 3 ? 1 : currentStep + 1;
-    changeStep(currentStep);
-  }, 3000); // Change step every 3 seconds
+function toggleStep(step) {
+  if (step === currentStep) return;
+  changeStep(step);
 }
 
 autoChangeStep(); // Start the automatic slideshow
